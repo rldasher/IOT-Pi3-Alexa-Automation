@@ -32,8 +32,8 @@ class device_handler(debounce_handler):
         # GPIO.output(int(7), state) ## State is true/false
 
         ############# Uncomment this code to revers the relay polarity ############
-        # if state==True:
-        #     state = False
+         if state==True:
+             state = False
         # else:
         #     state = True
         ############# Uncomment this code to revers the relay polarity ############
@@ -56,8 +56,8 @@ class device_handler(debounce_handler):
             GPIO.output(int(5), state)  ## State is true/false
         elif name == "tv":
             GPIO.setmode(GPIO.BOARD)  ## Use board pin numbering
-            GPIO.setup(int(15), GPIO.OUT)  ## Setup GPIO Pin to OUTPUT
-            GPIO.output(int(15), state)  ## State is true/false
+            GPIO.setup(int(16), GPIO.OUT)  ## Setup GPIO Pin to OUTPUT
+            GPIO.output(int(16), state)  ## State is true/false
         elif name == "pc":
             GPIO.setmode(GPIO.BOARD)  ## Use board pin numbering
             GPIO.setup(int(8), GPIO.OUT)  ## Setup GPIO Pin to OUTPUT
